@@ -4,12 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navigation pract1 VPK15JavaWeb</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <table>
+        <td>
+            <nav>
+        <ul>
+            <li>
+                <a class="chapter" href="./chapter-1.html">Глава 1. Введение в язык Go</a>
+            </li>
+            <li>
+                <a class="sub-chapter" href="./chapter-1.html#what-is-go">Что такое Go</a>
+            </li>
+            <li>
+                <a class="sub-chapter" href="./chapter-1.html#first-programm">Первая программа</a>
+            </li>
+            <li>
+                <a class="chapter" href="./chapter-2.html">Глава 2. Основы языка Go</a>
+            </li>
+            <li>
+                <a class="sub-chapter" href="./chapter-2.html#program-struct">Структура программы</a>
+            </li>
+            <li>
+                <a class="sub-chapter" href="./chapter-2.html#variables">Переменные</a>
+            </li>
+        </ul>
+    </nav>
+        </td>
+        <td>
     <header>
         <h1 class="title">Go-документация!</h1>
     </header>
+    
     <main>
         <h2>Глава 1. Введение в язык Go</h2>
         <h3 id="what-is-go">Что такое Go</h3>
@@ -191,13 +217,13 @@ func main() {
     </main>
 
     <footer>
-        <table>
-            <tr>
-                <td><a href="./index.html#main-title">На главную</a></td>
-                <td><p class="footer-title">Глава 1</p></td>
-                <td><a href="./chapter-2.html#chapter-2">Глава 2</a></td>
-            </tr>
-        </table>
-    </footer>
+    <nav class="footer-nav">
+        <a href="./index.html#main-title" class="footer-nav__item">На главную</a>
+        <span class="footer-nav__item footer-nav__item--title">Глава 1</span>
+        <a href="./chapter-2.html#chapter-2" class="footer-nav__item">Глава 2</a>
+    </nav>
+</footer>
+</td>
+</table>
 </body>
 </html>
