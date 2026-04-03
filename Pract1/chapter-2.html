@@ -3,88 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navigation pract1 VPK15JavaWeb</title>
+    <title>Go Документация - Глава 2</title>
+    <link rel="stylesheet" href="./style.css"/> 
 </head>
 <body>
-    <table>
-        <td>
-            <nav>
-        <ul>
-            <li>
-                <a class="chapter" href="./chapter-1.html">Глава 1. Введение в язык Go</a>
-            </li>
-            <li>
-                <a class="sub-chapter" href="./chapter-1.html#what-is-go">Что такое Go</a>
-            </li>
-            <li>
-                <a class="sub-chapter" href="./chapter-1.html#first-programm">Первая программа</a>
-            </li>
-            <li>
-                <a class="chapter" href="./chapter-2.html">Глава 2. Основы языка Go</a>
-            </li>
-            <li>
-                <a class="sub-chapter" href="./chapter-2.html#program-struct">Структура программы</a>
-            </li>
-            <li>
-                <a class="sub-chapter" href="./chapter-2.html#variables">Переменные</a>
-            </li>
-        </ul>
-    </nav>
-        </td>
-
-        <td>
     <header>
         <h1 class="title">Go-документация!</h1>
     </header>
-    <nav>
+    
+    <div class="content-wrapper">
+        <aside class="sidebar">
+            <nav class="sidebar-navigation">
+                <ul>
+                    <li>
+                        <a class="chapter" href="./chapter-1.html">Глава 1. Введение в язык Go</a>
+                    </li>
+                    <li>
+                        <a class="sub-chapter" href="./chapter-1.html#what-is-go">Что такое Go</a>
+                    </li>
+                    <li>
+                        <a class="sub-chapter" href="./chapter-1.html#first-programm">Первая программа</a>
+                    </li>
+                    <li>
+                        <a class="chapter" href="./chapter-2.html">Глава 2. Основы языка Go</a>
+                    </li>
+                    <li>
+                        <a class="sub-chapter" href="./chapter-2.html#program-struct">Структура программы</a>
+                    </li>
+                    <li>
+                        <a class="sub-chapter" href="./chapter-2.html#variables">Переменные</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    </nav>
-    <main>
-        <h2 id="chapter-2">Глава 2. Основы языка Go</h2>
-        <h3 id="program-struct">Структура программы</h3>
-        <p>
-            Программа на языке Go хранится в одном или нескольких файлах. Каждый файл с
-            программным кодом должен принадлежать какому-нибудь пакету. И вначале каждого
-            файла должно идти объявление пакета, к которому этот файл принадлежит. Пакет
-            объявляется с помощью ключевого слова <span class="code">package</span>.
-        </p>
-        <p>
-            В файле может использоваться функционал из других пакетов. В этом случае
-            используемые пакеты надо импортировать с помощью ключевого слова <span class="code">import</span>.
-            Импортируемые пакеты должны идти после объявления пакета для текущего файла:
-        </p>
-        <pre><code>package main
+        <main class="main-content">
+            <h2 id="chapter-2">Глава 2. Основы языка Go</h2>
+            
+            <h3 id="program-struct">Структура программы</h3>
+            <p>
+                Программа на языке Go хранится в одном или нескольких файлах. Каждый файл с
+                программным кодом должен принадлежать какому-нибудь пакету. И вначале каждого
+                файла должно идти объявление пакета, к которому этот файл принадлежит. Пакет
+                объявляется с помощью ключевого слова <span class="code">package</span>.
+            </p>
+            <p>
+                В файле может использоваться функционал из других пакетов. В этом случае
+                используемые пакеты надо импортировать с помощью ключевого слова <span class="code">import</span>.
+                Импортируемые пакеты должны идти после объявления пакета для текущего файла:
+            </p>
+            <section class="code">
+                <pre><code>package main
 import "fmt"</code></pre>
-        <p>
-            Например, в данном случае текущий файл будет находиться в пакете <span class="code">main</span>. И далее
-            он подключает пакет <span class="code">fmt</span>.
-        </p>
-        <p>
-            Причем главный пакет программы должен называться "main". Так как именно данный
-            пакет определяет, что будет создаваться исполняемый файл приложения, который после
-            компиляции можно будет запускать на выполнение.
-        </p>
-        <p>
-            После подключения других пакетов располагаются объявления типов, переменных,
-            функций, констант.
-        </p>
-        <p>
-            При этом входной точкой в приложения является функция с именем <span class="code">main</span>. Она
-            обязательно должна быть определена в программе. Все, что выполняется в программе,
-            выполняется именно в функции <span class="code">main</span>.
-        </p>
-        <pre><code>package main
+            </section>
+            <p>
+                Например, в данном случае текущий файл будет находиться в пакете <span class="code">main</span>. И далее
+                он подключает пакет <span class="code">fmt</span>.
+            </p>
+            <p>
+                Причем главный пакет программы должен называться "main". Так как именно данный
+                пакет определяет, что будет создаваться исполняемый файл приложения, который после
+                компиляции можно будет запускать на выполнение.
+            </p>
+            <p>
+                После подключения других пакетов располагаются объявления типов, переменных,
+                функций, констант.
+            </p>
+            <p>
+                При этом входной точкой в приложения является функция с именем <span class="code">main</span>. Она
+                обязательно должна быть определена в программе. Все, что выполняется в программе,
+                выполняется именно в функции <span class="code">main</span>.
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
 func main() {
     fmt.Println("Hello Go!")
 }</code></pre>
-        <p>Базовым элементом программы являются инструкции. Например, вызов функции
-            <span class="code">fmt.Println("Hello Go!")</span> представляет отдельную инструкцию. Каждая инструкция выполняет
-            определенное действие и размещается на новой строке:
-        </p>
-        <pre><code>package main
+            </section>
+            <p>Базовым элементом программы являются инструкции. Например, вызов функции
+                <span class="code">fmt.Println("Hello Go!")</span> представляет отдельную инструкцию. Каждая инструкция выполняет
+                определенное действие и размещается на новой строке:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -93,13 +97,15 @@ func main() {
     fmt.Println("Hello Golang!")
     fmt.Println("Hello Go!")
 }</code></pre>
-        <p>Здесь функция <span class="code">main</span> содержит три инструкции, которые выводят на консоль строку, и
-            каждая из инструкций размещается на новой строке.
-        </p>
-        <p>Можно размещать несколько инструкций и на одной строке, но тогда их надо отделять
-            точкой с запятой:
-        </p>
-        <pre><code>package main
+            </section>
+            <p>Здесь функция <span class="code">main</span> содержит три инструкции, которые выводят на консоль строку, и
+                каждая из инструкций размещается на новой строке.
+            </p>
+            <p>Можно размещать несколько инструкций и на одной строке, но тогда их надо отделять
+                точкой с запятой:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -107,24 +113,26 @@ func main() {
     fmt.Println("Hello Go!"); fmt.Println("Hello Golang!");
     fmt.Println("Hello Go!")
 }</code></pre>
-        <p>
-            В то же время размещение инструкций на новой строке представляет более
-            читабельный формат, поэтому более предпочтительно для использования.
-        </p>
+            </section>
+            <p>
+                В то же время размещение инструкций на новой строке представляет более
+                читабельный формат, поэтому более предпочтительно для использования.
+            </p>
 
-        <h4>Комментарии</h4>
-        <p>Программа может иметь комментарии. Комментарии служат для описания действий,
-            которые производит программа или какие-то ее части. При компиляции комментарии не
-            учитываются и не оказывают никакого влияния на работу приложения. Комментарии
-            бывают однострочными и многострочными.
-        </p>
-        <p>
-            Однострочный комментарий располагается в одну строку после двойного слеша <span class="code">//</span>.
-            Все, что идет после этих символов, воспринимается компилятором как комментарий.
-            Многострочный комментарий заключается между символами <span class="code">/*</span> и <span class="code">*/</span> и может занимать
-            несколько строк:
-        </p>
-        <pre><code>/*
+            <h4>Комментарии</h4>
+            <p>Программа может иметь комментарии. Комментарии служат для описания действий,
+                которые производит программа или какие-то ее части. При компиляции комментарии не
+                учитываются и не оказывают никакого влияния на работу приложения. Комментарии
+                бывают однострочными и многострочными.
+            </p>
+            <p>
+                Однострочный комментарий располагается в одну строку после двойного слеша <span class="code">//</span>.
+                Все, что идет после этих символов, воспринимается компилятором как комментарий.
+                Многострочный комментарий заключается между символами <span class="code">/*</span> и <span class="code">*/</span> и может занимать
+                несколько строк:
+            </p>
+            <section class="code">
+                <pre><code>/*
     Первая программа
     на языке Go
 */
@@ -137,42 +145,50 @@ import "fmt"  // подключение пакета fmt
 func main() {
     fmt.Println("Hello Go!")  // вывод строки на консоль
 }</code></pre>
+            </section>
 
-        <h3 id="variables">Переменные</h3>
-        <p>Для хранения данных в программе применяются переменные. Переменная
-            представляет именованный участок в памяти, который может хранить некоторое значение.
-            Для определения переменной применяется ключевое слово <span class="code">var</span>, после которого идет имя
-            переменной, а затем указывается ее тип:
-        </p>
-        <pre><code>var имя_переменной тип_данных</code></pre>
-        <p>
-            Имя переменной представляет произвольный идентификатор, который состоит из
-            алфавитных и цифровых символов и символа подчеркивания. При этом первым символом
-            должен быть либо алфавитный символ, либо символ подчеркивания. При этом имена не
-            должны представлять одно из ключевых слов: 
-            <span class="code">break</span>, <span class="code">case</span>, <span class="code">chan</span>, <span class="code">const</span>, <span class="code">continue</span>, <span class="code">default</span>,
-            <span class="code">defer</span>, <span class="code">else</span>, <span class="code">fallthrough</span>, <span class="code">for</span>, <span class="code">func</span>, <span class="code">go</span>, <span class="code">goto</span>, <span class="code">if</span>, <span class="code">import</span>, <span class="code">interface</span>, 
-            <span class="code">map</span>, <span class="code">package</span>, <span class="code">range</span>, <span class="code">return</span>, <span class="code">select</span>, <span class="code">struct</span>, <span class="code">switch</span>, <span class="code">type</span>, <span class="code">var</span>.
-        </p>
-        <p>Например, простейшее определение переменной:</p>
-        <pre><code>var hello string</code></pre>
-        <p>Данная переменная называется <span class="code">hello</span> и она представляет тип <span class="code">string</span>, то есть некоторую
-            строку.
-        </p>
-        <p>
-            Можно одновременно объявить сразу несколько переменных через запятую:
-        </p>
-        <pre><code>var a, b, c string</code></pre>
-        <p>
-            В данном случае определены переменные <span class="code">a</span>, <span class="code">b</span>, <span class="code">c</span>, которые имеют тип <span class="code">string</span>. В этом
-            случае опять же в конце указывается тип данных, и все переменные принадлежат этому
-            типу.
-        </p>
-        <p>
-            После определения переменной ей можно присвоить какое-либо значение, которое
-            соответствует ее типу:
-        </p>
-        <pre><code>package main
+            <h3 id="variables">Переменные</h3>
+            <p>Для хранения данных в программе применяются переменные. Переменная
+                представляет именованный участок в памяти, который может хранить некоторое значение.
+                Для определения переменной применяется ключевое слово <span class="code">var</span>, после которого идет имя
+                переменной, а затем указывается ее тип:
+            </p>
+            <section class="code">
+                <pre><code>var имя_переменной тип_данных</code></pre>
+            </section>
+            <p>
+                Имя переменной представляет произвольный идентификатор, который состоит из
+                алфавитных и цифровых символов и символа подчеркивания. При этом первым символом
+                должен быть либо алфавитный символ, либо символ подчеркивания. При этом имена не
+                должны представлять одно из ключевых слов: 
+                <span class="code">break</span>, <span class="code">case</span>, <span class="code">chan</span>, <span class="code">const</span>, <span class="code">continue</span>, <span class="code">default</span>,
+                <span class="code">defer</span>, <span class="code">else</span>, <span class="code">fallthrough</span>, <span class="code">for</span>, <span class="code">func</span>, <span class="code">go</span>, <span class="code">goto</span>, <span class="code">if</span>, <span class="code">import</span>, <span class="code">interface</span>, 
+                <span class="code">map</span>, <span class="code">package</span>, <span class="code">range</span>, <span class="code">return</span>, <span class="code">select</span>, <span class="code">struct</span>, <span class="code">switch</span>, <span class="code">type</span>, <span class="code">var</span>.
+            </p>
+            <p>Например, простейшее определение переменной:</p>
+            <section class="code">
+                <pre><code>var hello string</code></pre>
+            </section>
+            <p>Данная переменная называется <span class="code">hello</span> и она представляет тип <span class="code">string</span>, то есть некоторую
+                строку.
+            </p>
+            <p>
+                Можно одновременно объявить сразу несколько переменных через запятую:
+            </p>
+            <section class="code">
+                <pre><code>var a, b, c string</code></pre>
+            </section>
+            <p>
+                В данном случае определены переменные <span class="code">a</span>, <span class="code">b</span>, <span class="code">c</span>, которые имеют тип <span class="code">string</span>. В этом
+                случае опять же в конце указывается тип данных, и все переменные принадлежат этому
+                типу.
+            </p>
+            <p>
+                После определения переменной ей можно присвоить какое-либо значение, которое
+                соответствует ее типу:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -181,21 +197,25 @@ func main() {
     hello = "Hello world"
     fmt.Println(hello)
 }</code></pre>
-        <p>Поскольку переменная <span class="code">hello</span> представляет тип <span class="code">string</span>, ей можно присвоить строку. В
-            данном случае переменная <span class="code">hello</span> хранит строку <span class="code">"Hello world"</span>. С помощью функции <span class="code">Println</span>
-            значение этой переменной выводится на консоль.
-        </p>
-        <p>Также важно учитывать, что Go — регистрозависимый язык, то есть переменные с
-            именами <span class="code">hello</span> и <span class="code">Hello</span> будут представлять разные переменные:
-        </p>
-        <pre><code>var hello string
+            </section>
+            <p>Поскольку переменная <span class="code">hello</span> представляет тип <span class="code">string</span>, ей можно присвоить строку. В
+                данном случае переменная <span class="code">hello</span> хранит строку <span class="code">"Hello world"</span>. С помощью функции <span class="code">Println</span>
+                значение этой переменной выводится на консоль.
+            </p>
+            <p>Также важно учитывать, что Go — регистрозависимый язык, то есть переменные с
+                именами <span class="code">hello</span> и <span class="code">Hello</span> будут представлять разные переменные:
+            </p>
+            <section class="code">
+                <pre><code>var hello string
 hello = "Hello world"
 fmt.Println(Hello)  // ! Ошибка: переменной Hello нет, есть переменная hello</code></pre>
-        <p>
-            Также можно сразу при объявлении переменной присвоить ей начальное значение.
-            Такой прием называется инициализацией:
-        </p>
-        <pre><code>package main
+            </section>
+            <p>
+                Также можно сразу при объявлении переменной присвоить ей начальное значение.
+                Такой прием называется инициализацией:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -203,10 +223,12 @@ func main() {
     var hello string = "Hello world"
     fmt.Println(hello)
 }</code></pre>
-        <p>Если мы хотим сразу определить несколько переменных и присвоить им начальные
-            значения, то можно обернуть их в скобки:
-        </p>
-        <pre><code>package main
+            </section>
+            <p>Если мы хотим сразу определить несколько переменных и присвоить им начальные
+                значения, то можно обернуть их в скобки:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -218,10 +240,12 @@ func main() {
     fmt.Println(name)  // Tom
     fmt.Println(age)   // 27
 }</code></pre>
-        <p>Отличительной особенностью переменных является то, что их значение можно
-            многократно изменять:
-        </p>
-        <pre><code>package main
+            </section>
+            <p>Отличительной особенностью переменных является то, что их значение можно
+                многократно изменять:
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -235,16 +259,20 @@ func main() {
     hello = "Go Go Go Ole Ole Ole"
     fmt.Println(hello) // Go Go Go Ole Ole Ole
 }</code></pre>
+            </section>
 
-        <h4>Краткое определение переменной</h4>
-        <p>Также допустимо краткое определение переменной в формате:
-        </p>
-        <pre><code>имя_переменной := значение</code></pre>
-        <p>
-            После имени переменной ставится двоеточие и равно и затем указывается ее
-            значение.
-        </p>
-        <pre><code>package main
+            <h4>Краткое определение переменной</h4>
+            <p>Также допустимо краткое определение переменной в формате:
+            </p>
+            <section class="code">
+                <pre><code>имя_переменной := значение</code></pre>
+            </section>
+            <p>
+                После имени переменной ставится двоеточие и равно и затем указывается ее
+                значение.
+            </p>
+            <section class="code">
+                <pre><code>package main
 
 import "fmt"
 
@@ -252,25 +280,20 @@ func main() {
     name := "Tom"
     fmt.Println(name)
 }</code></pre>
-        <p>
-            В этом случае тип данных явным образом не указывается, он выводится
-            автоматически из присваиваемого значения. Ограничением такого способа является то,
-            что его можно использовать только внутри функции. Так, в примере выше, переменная
-            <span class="code">name</span> определяется внутри функции <span class="code">main</span>.
-        </p>
-
-    </main>
+            </section>
+            <p>
+                В этом случае тип данных явным образом не указывается, он выводится
+                автоматически из присваиваемого значения. Ограничением такого способа является то,
+                что его можно использовать только внутри функции. Так, в примере выше, переменная
+                <span class="code">name</span> определяется внутри функции <span class="code">main</span>.
+            </p>
+        </main>
+    </div>
 
     <footer>
-        <table>
-            <tr>
-                <td><a href="./chapter-1.html">Глава 1</a></td>
-                <td><p class="footer-title">Глава 2</p></td>
-                <td><a href="./index.html">На главную</a></td>
-            </tr>
-        </table>
+        <nav class="footer-nav">
+            <a href="./index.html" class="footer-nav__item">На главную</a>
+        </nav>
     </footer>
-    </table>
-    </td>
 </body>
 </html>
