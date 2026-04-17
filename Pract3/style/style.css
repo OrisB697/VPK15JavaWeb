@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    width: 1440px;
+    height: 75px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.block-header {
+    background-color: red;
+    width: 1230px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-img {
+    margin-left: 50px;
+}
